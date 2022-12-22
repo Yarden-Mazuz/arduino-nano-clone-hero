@@ -23,7 +23,7 @@ inputs = ['a', 's', 'd', 'e', 'w', 'q', 'z', 'x', 'c']  # the game inputs
 while True:
     if serialInst.in_waiting:
         packet = serialInst.readline()
-        packet = packet.decode('utf').rstrip('\n')  # taking button inputs from the chosen come which the guitar is
+        packet = packet.decode('utf').rstrip('\n')  # taking button inputs from the chosen COM which the guitar is
         # connected to, the input comes in the from of 1 and 0 so that 1 is unpressed button and 0 is pressed
         print(packet)
         g = 0
