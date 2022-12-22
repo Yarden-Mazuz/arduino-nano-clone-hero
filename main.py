@@ -24,13 +24,14 @@ def port_configuration():
     chosen_port_number = input('Which port is your guitar connected to? COM')
     serial_inst.baudrate = 9600
     serial_inst.port = "COM" + str(chosen_port_number)
-    serial_inst.open()
 
 
 keyboard = Controller()
 keyboard_inputs = ['a', 's', 'd', 'e', 'w', 'q', 'z', 'x', 'c']
+
 serial_inst = serial.Serial()
 port_configuration()
+serial_inst.open()
 
 while True:
     if serial_inst.in_waiting:
